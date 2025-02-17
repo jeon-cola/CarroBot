@@ -1,13 +1,17 @@
 package com.example.ssafy_pjt
 
+import BluetoothScreen
 import DeliverySceen
 import GameController
+import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
@@ -34,16 +38,21 @@ import com.example.ssafy_pjt.component.HomeRefistrationScreen
 import com.example.ssafy_pjt.component.HomeScreen
 import com.example.ssafy_pjt.component.HomeSearchScreen
 import com.example.ssafy_pjt.component.LoginSceen
+import com.example.ssafy_pjt.component.ProfileScreen
 import com.example.ssafy_pjt.component.RobotRegistration
 import com.example.ssafy_pjt.component.SendHomeScreen
 import com.example.ssafy_pjt.component.Setting
 import com.example.ssafy_pjt.component.SignupSceen
 import com.example.ssafy_pjt.ui.theme.Ssafy_pjtTheme
+import com.example.ssafy_pjt.ViewModel.ProfileViewModel
 import com.kakao.sdk.common.util.Utility
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import java.io.File
+import com.example.ssafy_pjt.network.RetrofitClient
+import androidx.activity.result.ActivityResultLauncher
+import com.example.ssafy_pjt.component.DeviceItem
 
 class MainActivity : ComponentActivity() {
     private val kakaoAuthViewModel: KakaoAuthViewModel by viewModels{
@@ -63,15 +72,40 @@ class MainActivity : ComponentActivity() {
         RobotRegistViewModelFactory(userViewModel)
     }
 
+    private val profileViewModel: ProfileViewModel by viewModels {
+        object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                return ProfileViewModel(userViewModel) as T
+            }
+        }
+    }
+
+    private lateinit var imagePickerLauncher: ActivityResultLauncher<String>
+
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted) {
+            imagePickerLauncher.launch("image/*")
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        
+        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
+            uri?.let { selectedImageUri ->
+                profileViewModel.updateProfileImage(selectedImageUri)
+            }
+        }
+        
         setContent {
             Ssafy_pjtTheme {
                 val navController = rememberNavController()
                 NavHost(
                     navController = navController,
-                    startDestination = "GameController"
+                    startDestination = "login"
                 ){
                     composable("login") {
                         LoginSceen(
@@ -140,7 +174,8 @@ class MainActivity : ComponentActivity() {
                     composable("Setting") {
                         Setting(
                             modifier = Modifier,
-                            navController = navController
+                            navController = navController,
+                            profileViewModel=profileViewModel
                         )
                     }
                     composable("SendHomeScreen") {
@@ -155,7 +190,38 @@ class MainActivity : ComponentActivity() {
                             navController = navController
                         )
                     }
+                    composable("ProfileScreen") {
+                        ProfileScreen(
+                            navController = navController,
+                            viewModel = profileViewModel,
+                            onImageClick = {
+                                checkAndRequestPermission()
+                            }
+                        )
+                    }
+                    composable("bluetooth") {
+                        BluetoothScreen {
+                            navController.navigate("GameController")
+                        }
+                    }
+                    /*composable("device") {
+                        DeviceItem(
+                            onClick = {},
+                            device = {}
+                        ) { }*/
+                    }
                 }
+            }
+        }
+    }
+
+    private fun checkAndRequestPermission() {
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU -> {
+                requestPermissionLauncher.launch(android.Manifest.permission.READ_MEDIA_IMAGES)
+            }
+            else -> {
+                requestPermissionLauncher.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
             }
         }
     }
