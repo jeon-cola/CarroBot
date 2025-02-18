@@ -91,11 +91,11 @@ fun HomeScreen(
     val (lat,lng) = userViewModel.loaction.value
     val socketService = remember { SocketService.getInstance() }
     socketViewModel.connectToSocket()
-    socketViewModel.sendSocketMessage("hello")
     val isConnected by socketService.isConnected.collectAsState()
     val serverResponses by socketViewModel.serverResponses.collectAsState()
 
-    LaunchedEffect(socketService) {
+    LaunchedEffect(serverResponses) {
+        Log.d("TAG","${serverResponses}")
     }
 
     LaunchedEffect(Unit) {
@@ -152,7 +152,7 @@ fun HomeScreen(
             modifier = Modifier
                 .padding(paddingValues)
                 .fillMaxSize()
-            .padding(start = 14.dp, end = 14.dp)
+                .padding(start = 14.dp, end = 14.dp)
         ) {
             Button(
                 onClick = {},
@@ -242,8 +242,9 @@ fun HomeScreen(
             )
             Box{
                 Row(
-                    modifier = modifier.fillMaxWidth()
-                        .padding(bottom =10.dp),
+                    modifier = modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 10.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Button (
@@ -276,7 +277,8 @@ fun HomeScreen(
                 }
             }
             Box(
-                modifier = modifier.background(my_blue, shape = RoundedCornerShape(16.dp))
+                modifier = modifier
+                    .background(my_blue, shape = RoundedCornerShape(16.dp))
                     .fillMaxWidth(1f)
                     .height(50.dp)
                     .clip(RoundedCornerShape(16.dp)),
@@ -298,7 +300,8 @@ fun HomeScreen(
                 style = loginTitle
             )
             Box(
-                modifier = modifier.fillMaxSize(1f)
+                modifier = modifier
+                    .fillMaxSize(1f)
                     .padding(bottom = 5.dp)
                     .clip(RoundedCornerShape(16.dp))
             ){
