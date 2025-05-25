@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.ssafy_pjt.app-mergeDebugResources-76:/values-v16/values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\hghg9\\.gradle\\caches\\8.10.2\\transforms\\b07c40c5a36e4449e696ea99c7d3a8e2\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "5",
+                        "endColumns": "12",
+                        "endOffsets": "223"
+                    }
+                }
+            ]
+        }
+    ]
+}

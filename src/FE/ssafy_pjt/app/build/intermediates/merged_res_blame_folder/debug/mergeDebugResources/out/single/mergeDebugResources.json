@@ -1,0 +1,126 @@
+[
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_star_filled.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/star_filled.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_delivery.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/delivery.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xhdpi_appicon.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xhdpi/appicon.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_roboticon.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/roboticon.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-mdpi_appicon.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-mdpi/appicon.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxhdpi_appicon.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxhdpi/appicon.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_google.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/google.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_ic_android_black_24dp.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/ic_android_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-hdpi_appicon.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-hdpi/appicon.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxxhdpi_appicon.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxxhdpi/appicon.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_footprint.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/footprint.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_controller.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/controller.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/xml_backup_rules.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_kakao.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/kakao.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_power.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/power.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/drawable_delivery_robot.png.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/drawable/delivery_robot.png"
+    },
+    {
+        "merged": "com.example.ssafy_pjt.app-debug-78:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.ssafy_pjt.app-main-80:/mipmap-hdpi/ic_launcher.webp"
+    }
+]
